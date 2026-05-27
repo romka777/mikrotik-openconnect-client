@@ -1,0 +1,12 @@
+name: openconnect-client
+category: networking
+services:
+  app:
+    image: 'docker.io/romka/mikrotik-openconnect-client:latest'
+    restart: unless-stopped
+    environment:
+      USERNAME: username
+      PASSWORD: password
+      SERVER: https://example.com
+      INTERFACE_NAME: vpn0
+      OC_OPTIONS: '--servercert=123'
